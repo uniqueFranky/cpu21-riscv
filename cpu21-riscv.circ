@@ -113,7 +113,7 @@
       <a name="width" val="1"/>
     </tool>
     <tool name="Bit Extender">
-      <a name="in_width" val="16"/>
+      <a name="in_width" val="20"/>
       <a name="out_width" val="32"/>
       <a name="type" val="zero"/>
     </tool>
@@ -966,13 +966,9 @@
     <wire from="(490,880)" to="(490,930)"/>
     <wire from="(490,820)" to="(490,880)"/>
     <wire from="(490,880)" to="(500,880)"/>
-    <wire from="(520,880)" to="(610,880)"/>
-    <wire from="(590,900)" to="(610,900)"/>
     <wire from="(1120,730)" to="(1120,750)"/>
     <wire from="(930,710)" to="(1100,710)"/>
     <wire from="(1130,720)" to="(1150,720)"/>
-    <wire from="(650,890)" to="(680,890)"/>
-    <wire from="(720,890)" to="(1370,890)"/>
     <wire from="(600,220)" to="(650,220)"/>
     <wire from="(1370,710)" to="(1370,890)"/>
     <wire from="(1230,720)" to="(1230,740)"/>
@@ -1021,16 +1017,16 @@
     <wire from="(1300,490)" to="(1300,690)"/>
     <wire from="(970,310)" to="(970,560)"/>
     <wire from="(1040,300)" to="(1090,300)"/>
+    <wire from="(520,880)" to="(560,880)"/>
+    <wire from="(600,880)" to="(710,880)"/>
+    <wire from="(750,890)" to="(1370,890)"/>
+    <wire from="(680,900)" to="(710,900)"/>
     <comp lib="6" loc="(1546,202)" name="Text">
       <a name="text" val="用这个时钟源需要去掉电路中的其他时钟源"/>
       <a name="font" val="SansSerif bold 12"/>
       <a name="color" val="#ff1410"/>
       <a name="halign" val="center"/>
       <a name="valign" val="base"/>
-    </comp>
-    <comp lib="3" loc="(650,890)" name="Shifter">
-      <a name="width" val="20"/>
-      <a name="shift" val="ll"/>
     </comp>
     <comp lib="0" loc="(300,140)" name="Splitter">
       <a name="facing" val="north"/>
@@ -1829,6 +1825,10 @@
       <a name="color" val="#000000"/>
       <a name="halign" val="center"/>
       <a name="valign" val="base"/>
+    </comp>
+    <comp lib="3" loc="(750,890)" name="Shifter">
+      <a name="width" val="32"/>
+      <a name="shift" val="ll"/>
     </comp>
     <comp lib="0" loc="(510,950)" name="Splitter">
       <a name="facing" val="east"/>
@@ -2746,11 +2746,6 @@
       <a name="width" val="1"/>
       <a name="value" val="0x1"/>
     </comp>
-    <comp lib="0" loc="(720,890)" name="Bit Extender">
-      <a name="in_width" val="20"/>
-      <a name="out_width" val="32"/>
-      <a name="type" val="sign"/>
-    </comp>
     <comp lib="0" loc="(540,510)" name="Constant">
       <a name="facing" val="east"/>
       <a name="width" val="5"/>
@@ -2809,11 +2804,6 @@
       <a name="width" val="1"/>
       <a name="label" val="jalr"/>
       <a name="labelfont" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="0" loc="(590,900)" name="Constant">
-      <a name="facing" val="east"/>
-      <a name="width" val="5"/>
-      <a name="value" val="0xc"/>
     </comp>
     <comp lib="0" loc="(870,960)" name="Constant">
       <a name="facing" val="east"/>
@@ -2905,34 +2895,9 @@
       <a name="labelfont" val="Dialog plain 12"/>
       <a name="labelcolor" val="#000000"/>
       <a name="contents">addr/data: 10 32
-100493 100006f 100493 200913 300993 100006f 100493 200913
-300993 100006f 100493 200913 300993 100006f 100493 200913
-300993 29c000ef 100413 100493 1f49493 900533 2200893 73
-24d493 48463 fedff06f 900533 2200893 73 100493 249493
-900533 2200893 73 48463 fedff06f 100493 1f49493 900533
-2200893 73 4034d493 900533 2200893 73 4044d493 900533
-2200893 73 4044d493 900533 2200893 73 4044d493 900533
-2200893 73 4044d493 900533 2200893 73 4044d493 900533
-2200893 73 4044d493 900533 2200893 73 4044d493 900533
-2200893 73 100413 1f41993 41f9d993 433 c00913 300b13
-140413 f47413 800293 100313 499993 89e9b3 1300533 2200893
-73 406282b3 fe0294e3 140413 f00f93 1f47433 1c41413 800293
-100313 49d993 89e9b3 1300533 2200893 73 406282b3 fe0294e3
-1c45413 406b0b33 b0463 f95ff06f 2b3 fff2c293 829293 ff2e293
-500533 2200893 73 fff00413 493 84a023 140413 448493
-84a023 140413 448493 84a023 140413 448493 84a023 140413
-448493 84a023 140413 448493 84a023 140413 448493 84a023
-140413 448493 84a023 140413 448493 84a023 140413 448493
-84a023 140413 448493 84a023 140413 448493 84a023 140413
-448493 84a023 140413 448493 84a023 140413 448493 84a023
-140413 448493 84a023 140413 448493 140413 433 3c00493
-42983 4aa03 149a2b3 28663 134a023 1442023 ffc48493 fe9412e3
-800533 2200893 73 440413 3c00493 fc9416e3 a00893 73
-413 140413 800533 2200893 73 240413 800533 2200893
-73 340413 800533 2200893 73 440413 800533 2200893
-73 540413 800533 2200893 73 640413 800533 2200893
-73 740413 800533 2200893 73 840413 800533 2200893
-2200893 73 8067
+800e13 fedc04b7 fff00413 1045413 84e4b3 900533 2200893 73
+ba984b7 900533 73 76544b7 900533 73 32104b7 900533
+73 fffe0e13 fa0e1ee3 a00893 73
 </a>
       <a name="Select" val="high"/>
     </comp>
@@ -3135,11 +3100,21 @@
       <a name="label" val="NeedLink"/>
       <a name="labelfont" val="Dialog plain 12"/>
     </comp>
+    <comp lib="0" loc="(680,900)" name="Constant">
+      <a name="facing" val="east"/>
+      <a name="width" val="5"/>
+      <a name="value" val="0xc"/>
+    </comp>
     <comp lib="0" loc="(140,1020)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="32"/>
       <a name="label" val="PC"/>
       <a name="labelfont" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="0" loc="(600,880)" name="Bit Extender">
+      <a name="in_width" val="20"/>
+      <a name="out_width" val="32"/>
+      <a name="type" val="zero"/>
     </comp>
     <comp lib="5" loc="(280,80)" name="Hex Digit Display">
       <a name="color" val="#f00000"/>
