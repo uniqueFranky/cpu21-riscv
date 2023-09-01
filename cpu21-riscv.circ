@@ -19220,6 +19220,7 @@ fffe0e13 fe0e12e3 1000e13 313 32483 900533 2200893 73
     <wire from="(990,600)" to="(990,660)"/>
     <wire from="(990,660)" to="(990,670)"/>
     <wire from="(880,660)" to="(880,670)"/>
+    <wire from="(270,460)" to="(270,530)"/>
     <wire from="(910,880)" to="(910,910)"/>
     <wire from="(830,720)" to="(830,840)"/>
     <wire from="(570,850)" to="(570,880)"/>
@@ -19325,7 +19326,6 @@ fffe0e13 fe0e12e3 1000e13 313 32483 900533 2200893 73
     <wire from="(440,1000)" to="(500,1000)"/>
     <wire from="(770,560)" to="(770,580)"/>
     <wire from="(710,600)" to="(790,600)"/>
-    <wire from="(270,460)" to="(270,480)"/>
     <comp lib="0" loc="(840,40)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -19398,12 +19398,6 @@ fffe0e13 fe0e12e3 1000e13 313 32483 900533 2200893 73
       <a name="color" val="#000000"/>
       <a name="halign" val="center"/>
       <a name="valign" val="base"/>
-    </comp>
-    <comp lib="0" loc="(270,480)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="1"/>
-      <a name="label" val="CLK"/>
-      <a name="labelfont" val="Dialog plain 12"/>
     </comp>
     <comp lib="0" loc="(990,670)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -21636,6 +21630,12 @@ ffc10113 12503 ffc10113 12883 200073 1112023 410113 a12023
       <a name="label" val=""/>
       <a name="labelfont" val="Dialog plain 12"/>
       <a name="labelcolor" val="#000000"/>
+    </comp>
+    <comp lib="0" loc="(270,530)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="1"/>
+      <a name="label" val="CLK"/>
+      <a name="labelfont" val="Dialog plain 12"/>
     </comp>
     <comp lib="4" loc="(450,500)" name="T Flip-Flop">
       <a name="trigger" val="rising"/>
